@@ -1,0 +1,32 @@
+h4{
+  margin-left: 20px;
+  color: rgb(155, 155, 155);
+}
+
+h3{
+  display: table;
+  margin: 0 auto;
+}
+
+h5{
+  margin-left: 20px;
+  color: rgb(34, 8, 85);
+}
+
+p{
+  margin-left: 20px;
+}
+
+li{
+  margin-left: 10%;
+}
+
+img{
+  display: table;
+  margin: 0 auto;
+}
+
+#logo{
+  margin-left: 20px;
+  float: left;
+}

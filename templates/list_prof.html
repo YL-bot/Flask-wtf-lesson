@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br/>
+{% if list in ["ol", "ul"] %}
+<h3>Список профессий</h3>
+    {% if "ol" == list %}
+        <ol>
+        {% for job in job_list %}
+            <li><h4>{{ job }}</h4>
+            </li>
+        {% endfor %}
+        </ol>
+    {% else %}
+        <ul>
+        {% for job in job_list %}
+            <li><h4>{{ job }}</h4>
+            </li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+{% else %}
+<div class="alert alert-danger" role="alert">
+    <h3>Неверный тип</h3>
+</div>
+{% endif %}
+{% endblock %}

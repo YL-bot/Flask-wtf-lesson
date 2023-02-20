@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br/>
+<h5>{{ Dict["Заголовок"] }}</h5>
+{% for i in Dict %}
+{% if loop.last %}
+<p>{{ i }} {{ Dict[i] }}</p>
+{% elif not(loop.first) %}
+<p>{{ i }}: {{ Dict[i] }}</p>
+{% endif %}
+{% endfor %}
+{% endblock %}
