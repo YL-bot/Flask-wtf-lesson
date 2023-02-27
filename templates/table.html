@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/style3.css') }}" />
+<h1 id="tables_h1">Оформление каюты</h1>
+<body>
+<table>
+  <tr>
+    <th>Каюта</th>
+    <th>Эмблема</th>
+  </tr>
+  {% if type == 1 %}
+    <tr>
+      <td><img src="/static/images/red.jpg" width=300 height=500></td>
+      <td><img src="/static/images/monster.jpeg" width=300 height=500></td>
+    </tr>
+  {% elif type == 2 %}
+    <tr>
+      <td><img src="/static/images/blue.png" width=300 height=500></td>
+      <td><img src="/static/images/monster.jpeg" width=300 height=500></td>
+    </tr>
+  {% elif type == 3 %}
+    <tr>
+      <td><img src="/static/images/pink.jpg" width=300 height=500></td>
+      <td><img src="/static/images/monster1.jpg" width=300 height=500></td>
+    </tr>
+  {% elif type == 4 %}
+    <tr>
+      <td><img src="/static/images/geen.png" width=300 height=500></td>
+      <td><img src="/static/images/monster1.jpg" width=300 height=500></td>
+    </tr>
+  {% elif type == 5 %}
+    <p>Invalid data</p>
+  {% endif %}
+</table>
+</body>
+{% endblock %}

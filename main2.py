@@ -85,5 +85,23 @@ def distribution():
     return render_template('distribution.html', spis=spis)
 
 
+@app.route('/table/<sex>/<age>')
+def tables(sex, age):
+    if not age.isdigit():
+        return
+    else:
+        if sex == "male" and int(age) < 21:
+            count = 1
+        elif sex == "female" and int(age) < 21:
+            count = 2
+        elif sex == "male" and int(age) >= 21:
+            count = 3
+        elif sex == "female" and int(age) >= 21:
+            count = 4
+        else:
+            count = 5
+        return render_template('table.html', type=count)
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
